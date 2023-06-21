@@ -1,0 +1,16 @@
+rpm -i -v webmin-1.720.rpm установка webmin (-v показать процесс установки).
+rpm -e webmin удалить установленную прогу webmin.
+rpm -K webmin-1.720.rpm проверить в порядке ли ключи пакета.
+rpm -Vv openssh-clients  проверяет на какие файлы операется openssh-clients.
+rpm -q openssh инфа о установленной проге.
+rpm -qi openssh полная инфа о установленной проге. когда установлена, когда собрана, описание.
+rpm -qd openssh где документация.
+rpm2cpio webmin-1.720.rpm > webmin.cpio посмотреть что входит в пакет, и разобрать на состовные части.
+____________________________________
+yum --help
+yum install openssh-clients установить openssh-clients.
+yum remove openssh-clients удалить openssh-clients.
+/etc/yum.repos.d/ тут лежат репозитории в виде отдельных файлов. расширения у них .repo
+yum upgrade обновление пакетов.
+yumdownloader openssh скачать пакет без установки.
+yum search openssh поиск пакета.
