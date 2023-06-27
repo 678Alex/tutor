@@ -1,0 +1,9 @@
+apt install mysql-server установка mysql сервер + клиент
+
+mysql -u root подключиться к mysql с помощью юзера рут.
+
+CREATE DATABASE cars;  создать базу данных с именем cars.
+USE cars; выбрать базу данных cars.
+CREATE TABLE new (brand VARCHAR(10), model VARCHAR(10), year YEAR, price INT); создание таблицы new и поля brand, model, year, price.
+SHOW TABLES; показать таблицы.
+DESCRIBE new; показать инфо о таблице. 
