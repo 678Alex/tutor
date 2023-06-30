@@ -1,3 +1,14 @@
+
+#!/bin/bash
+x=$(date)
+y=`uptime -p`
+echo "Сегодня $x и $y"
+
+
+
+
+
+
 Так же можно создать функцию:
 #WTF   
 function WTF() {
@@ -24,6 +35,8 @@ date > $1.txt;
 sudo grep $1 /var/log/auth.log | tail -n $2 >>  $1.txt;
 cat $1.txt;
 }
+
+
 
 _____________________________________
 

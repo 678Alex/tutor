@@ -7,3 +7,27 @@ USE cars; выбрать базу данных cars.
 CREATE TABLE new (brand VARCHAR(10), model VARCHAR(10), year YEAR, price INT); создание таблицы new и поля brand, model, year, price.
 SHOW TABLES; показать таблицы.
 DESCRIBE new; показать инфо о таблице. 
+
+
+mysql --local-infile=1 -u root включение режима импорта данных из файла. (по умолчанию отключен.)
+SET GLOBAL local_infile=1;
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+
+LOAD DATA LOCAL INFILE "new.txt" INTO TABLE new; импорт данных из файла new.txt в таблицу new.
+
+SELECT * FROM used; просмотр всех столбцов табилцы used
+
+INSERT INTO new (brand, model, year) VALUES ('Daewoo','Nexia','2015'); ручной ввод данных в таблицу new
+
+DELETE FROM new WHERE model='Nexia';  удалить из таблицы new где в столбе model значение Nexia.
+
+UPDATE new SET model="FIESTA" WHERE model="FOCUS"; изменить занчение в таблице new, столбца model с фокус на фиеста.
+
+SELECT * FROM new JOIN used ON new.brand = used.brand; обьединить таблицы по столбцу brand
+
+cars.new.brand полный путь к полю.
+
+SELECT * FROM new ORDER BY brand; сортировка по алфавиту
+
+SELECT * FROM new GROUP BY brand; групировка.
+
